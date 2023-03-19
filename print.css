@@ -1,0 +1,10 @@
+.page {
+    width: 21cm;
+    height: 29.5cm;
+    padding-top: 25px;
+    background: white;
+}
+
+.page-section {
+    padding: 0 1cm;
+}

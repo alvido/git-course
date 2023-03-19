@@ -1,0 +1,392 @@
+*, *:before, *:after {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    color: #5E6E82;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 166%
+}
+.page{
+    width: 994px;
+    height: auto;
+    padding: 0;
+    margin: 0 auto;
+    background-color: #EDF2F9;
+}
+.page-section{
+    padding: 0;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    padding: 25px 30px;
+    background-color: #fff;
+
+}
+.header_list{
+    width: 276px;
+}
+.header_item span{
+    font-weight: 600;
+    width: 113px;
+    margin-right: 40px;
+}
+.header_item{
+    display: flex;
+    font-weight: 400;
+    line-height: 18px;
+}
+.main{
+    padding: 0 30px;
+}
+section{
+    padding-top: 24px;
+}
+.title{
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 27px;
+    margin-bottom: 14px;
+}
+.description_text{
+    padding: 28px 25px 21px 27px;
+    background: #fff;
+}
+.issue_content{
+}
+.number{
+    position: relative;
+    margin-right: 40px;
+}
+.subject{
+    position: relative;
+}
+.patient_name{
+    width: 280px;
+    position: relative;
+}
+.section_item:first-child .number:before{
+    content: "#";
+    display: block;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    position: absolute;
+    left: 0;
+    top: -36px;
+}
+.section_item:first-child .subject:before{
+    content: "Subject";
+    display: block;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    position: absolute;
+    left: 0;
+    top: -36px;
+}
+.section_item:first-child .patient_name:before{
+    content: "Patient name";
+    display: block;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    position: absolute;
+    left: 0;
+    top: -36px;
+}
+.steps_list{
+    background: #fff;
+}
+.steps_content{
+    display: flex;
+    width: 500px;
+}
+.steps_content span{
+    margin-right: 15px;
+}
+.section_list_head{
+    padding: 5px 20px;
+    display: flex;
+    justify-content: space-between;
+}
+.list_title{
+    font-weight: 500;
+    line-height: 18px;
+}
+.list_title:nth-child(2){
+    width: 181px;
+}
+.list_title:nth-child(4){
+    width: 38px;
+}
+.list_title:nth-child(6){
+    width: 116px;
+}
+.list_title:last-child{
+    width: 256px;
+}
+.section_list{
+    margin-top: 55px;
+    background: #fff;
+}
+.section_item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 20px;
+    line-height: 18px;
+}
+.section_item:nth-child(2n){
+    background: rgba(216, 226, 239, 0.15);
+}
+.medications_img{
+    position: relative;
+}
+.drag{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.drag_name{
+    font-weight: 500;
+}
+.doctor_name{
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 16px;
+    color: #9AA6B5;
+}
+.strenth{
+    font-weight: 500;
+    position: relative;
+}
+.refills{
+    width: 38px;
+    font-weight: 500;
+    position: relative;
+}
+.qty{
+    width: 28px;
+    font-weight: 500;
+    position: relative;
+}
+.direction{
+    max-width: 116px;
+    font-weight: 500;
+    position: relative;
+}
+.checkbox,
+#refill_input{
+    position: relative;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.checkbox input{
+    display: none;
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+.checkmark{
+    display: block;
+    position: relative;
+    height: 14px;
+    width: 14px;
+    border: 1px solid #D8E2EF;
+    border-radius: 3px;
+    transition: .3s;
+}
+/* On mouse-over, add a grey background color */
+.checkbox:hover input ~ .checkmark {
+    background-color: #e0e0e0;
+}
+
+/*
+ When the checkbox is checked, add a blue background
+.checkbox input:checked ~ .checkmark {
+    background-color: #0061A3;
+}
+*/
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+    content: "";
+    display: none;
+    position: absolute;
+}
+
+/* Show the checkmark when checked */
+.checkbox input:checked ~ .checkmark:after {
+    display: block;
+}
+.checkbox .checkmark:after{
+    left: 3.5px;
+    width: 5px;
+    height: 10px;
+    border: solid #FD5000;
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    border-radius: 0 1px 0 1px;
+    transition: .3s;
+}
+.comment{
+    position: relative;
+    width: 256px;
+    border: 1px solid #D8E2EF;
+    border-radius: 4px;
+    padding: 6px;
+    font-size: 12px;
+    line-height: 100%;
+}
+.section_item:first-child .medications_img:before{
+    content: "Image";
+    display: block;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    position: absolute;
+    left: 0;
+    top: -36px;
+}
+.section_item:first-child .drag:before{
+    content: "Drug&Dose";
+    display: block;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    position: absolute;
+    left: 0;
+    top: -36px;
+}
+.section_item:first-child .strenth:before{
+    content: "Strenth";
+    display: block;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    position: absolute;
+    left: 0;
+    top: -44px;
+}
+.section_item:first-child .refills:before{
+    content: "Refills left";
+    display: block;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    position: absolute;
+    left: 0;
+    top: -62px;
+}
+.section_item:first-child .qty:before{
+    content: "Q-ty";
+    display: block;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    position: absolute;
+    left: 0;
+    top: -44px;
+}
+.section_item:first-child .direction:before{
+    content: "Direction";
+    display: block;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    position: absolute;
+    left: 0;
+    top: -34px;
+}
+.section_item:first-child #check_dc:before{
+    content: "DC";
+    display: block;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    position: absolute;
+    left: 0;
+    top: -44px;
+}
+.section_item:first-child #check_refill:before{
+    content: "Refill";
+    display: block;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    position: absolute;
+    left: 0;
+    top: -44px;
+}
+.section_item:first-child .comment:before{
+    content: "Comment";
+    display: block;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    position: absolute;
+    left: 0;
+    top: -41px;
+}
+
+.footer{
+    height: 76px;
+    position: relative;
+}
+.number_page{
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    position: absolute;
+    right: 32px;;
+    bottom: 17px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
